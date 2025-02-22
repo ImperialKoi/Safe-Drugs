@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { ClipboardList, Truck, Send, CheckCircle } from 'lucide-react';
+import image from './image.png'
 
 export default function DashboardPage() {
   const [procedure, setProcedure] = useState('');
   const [supplier, setSupplier] = useState('');
   const [suppliers, setSuppliers] = useState<string[]>([]);
+  const [showImage, setShowImage] = useState(false);
 
   const handleAddSupplier = () => {
     if (supplier.trim()) {
@@ -15,12 +17,12 @@ export default function DashboardPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Add submission logic here
     console.log({ procedure, suppliers });
+    setShowImage(true); // Show image overlay
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="bg-white rounded-xl shadow-lg p-8">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-8">
@@ -89,6 +91,17 @@ export default function DashboardPage() {
           </form>
         </div>
       </div>
+
+      {/* Overlay Image */}
+      {showImage && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 transition-opacity duration-1000 opacity-100">
+          <img
+            src={image}
+            alt="Procedure Submitted"
+            className="w-1/2 h-auto rounded-lg shadow-lg transition-opacity duration-1000"
+          />
+        </div>
+      )}
     </div>
   );
 }
