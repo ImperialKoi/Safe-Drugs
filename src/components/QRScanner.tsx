@@ -34,7 +34,7 @@ const QRCodeReader: React.FC = () => {
           Scanned Code: {scanResult}
         </div>
       ) : (
-        <video ref={videoRef} className="mt-4 w-64 h-64 border"></video>
+        <video ref={videoRef} className="mt-4 w-128 h-128 border"></video>
       )}
     </div>
   );
