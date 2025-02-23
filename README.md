@@ -81,25 +81,6 @@ POST /api/verify
 ```
 
 🌐 Tech Stack
-Frontend: React + Redux | Backend: Node.js/Express
-AI: TensorFlow/PyTorch | Blockchain: Hyperledger Fabric
+Frontend: React + Next | Backend: Node.js/Express/Rust
+AI: TensorFlow/PyTorch | Blockchain: Solana
 Database: PostgreSQL + IPFS | Auth: Auth0
-
-🤝 Contributing
-Fork repo
-
-Create feature branch: git checkout -b feature/amazing-feature
-
-Commit changes: git commit -m 'Add amazing feature'
-
-Push: git push origin feature/amazing-feature
-
-Open PR
-
-📜 License
-MIT License - see LICENSE
-
-📧 Contact
-Team MediTrust
-Email
-GitHub Profile | LinkedIn
