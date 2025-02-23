@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Mock database with updated QR codes
 const validCodes = new Set([
-    'secret-1234',
+    'valid',
     'valid-5678',
     'test-9012'
 ]);

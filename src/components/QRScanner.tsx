@@ -89,7 +89,7 @@ const QRCodeReader: React.FC = () => {
         <h1 className="text-2xl font-bold">QR Code Verifier</h1>
 
         {verificationStatus.state === 'scanning' ? (
-            <video ref={videoRef} className="w-64 h-64 border-2 rounded-lg" />
+            <video ref={videoRef} className="w-128 h-128 border-2 rounded-lg" />
         ) : (
             <div className="p-4 border-2 rounded-lg w-64 h-64 flex flex-col items-center justify-center">
               {verificationStatus.state === 'loading' && (
