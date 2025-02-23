@@ -42,50 +42,44 @@ contract DrugTracking {
         bool isVerified;  
     }  
     mapping(string => Package) public packages;  
-}  
+}
+```
 ⚙️ Installation
 Clone repo:
+```python
 git clone https://github.com/yourusername/meditrust.git
+```
 
 Install dependencies:
-
-bash
-Copy
+```python
 cd client && npm install  
-cd ../server && npm install  
-Configure environment:
-
-env
-Copy
-# .env.example  
-BLOCKCHAIN_NODE_URL="wss://meditrust-chain.net"  
-AI_API_KEY="your_tensorflow_serving_key"  
-IPFS_CLUSTER="your_ipfs_cluster_details"  
-Start services:
-
-bash
-Copy
-# Start blockchain nodes  
-docker-compose -f docker-chain.yml up  
+cd ../server && npm install
+```
 
 # Launch backend  
-npm run start:server  
+```python
+node server.js
+```
 
 # Run frontend  
-npm run start:client  
+```python
+npm run dev
+```
 📸 Usage Demo
 Generating QR Tracking Code
 Dashboard Demo
 
 Verifying Package
-bash
-Copy
 # Scan QR code via API  
+
+```python
 POST /api/verify  
 {  
   "qr_hash": "1a2b3c...",  
   "current_location": "Warehouse7"  
-}  
+}
+```
+
 🌐 Tech Stack
 Frontend: React + Redux | Backend: Node.js/Express
 AI: TensorFlow/PyTorch | Blockchain: Hyperledger Fabric
@@ -109,13 +103,3 @@ MIT License - see LICENSE
 Team MediTrust
 Email
 GitHub Profile | LinkedIn
-
-Copy
-
-**To customize**:  
-1. Replace `yourusername`, `contact@meditrust.health`, and social links  
-2. Add actual screenshots/gifs in the Usage section  
-3. Update blockchain/AI implementation details to match your actual code  
-4. Include your live demo link if available  
-
-Want me to expand any specific section (API docs, error handling, etc.)?
