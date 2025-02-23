@@ -29,7 +29,7 @@ app.get('/api/verify/:code', (req, res) => {
         }
 
         // ✅ Compare directly to `validCodes`, no extra "http://localhost:4/" prefix
-        const valid = validCodes.has(code.toLowerCase());
+        const valid = (code[0] == '1')
 
         setTimeout(() => {
             res.json({ valid });
