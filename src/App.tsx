@@ -17,7 +17,7 @@ function Layout({ children }: { children: React.ReactNode }) {
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
             <Shield className="w-8 h-8 text-primary-600" />
-            <span className="text-xl font-bold text-gray-900">PharmGuard AI</span>
+            <span className="text-xl font-bold text-gray-900">MediTrust</span>
           </Link>
           <div className="flex space-x-6">
             <Link to="/scan" className="text-gray-600 hover:text-gray-900 flex items-center">
@@ -45,7 +45,7 @@ function Layout({ children }: { children: React.ReactNode }) {
             <AnimatedSection>
               <div className="flex items-center space-x-2 mb-4">
                 <Shield className="w-6 h-6 text-primary-400" />
-                <span className="font-bold">PharmGuard AI</span>
+                <span className="font-bold">MediTrust</span>
               </div>
               <p className="text-gray-400">
                 Securing the pharmaceutical supply chain through advanced AI and blockchain technology
