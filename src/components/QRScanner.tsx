@@ -1,6 +1,8 @@
 // QRCodeReader.tsx (updated version)
 import React, { useEffect, useRef, useState } from "react";
 import { BrowserMultiFormatReader } from "@zxing/library";
+import Red from './red'
+import Blue from './blue'
 
 type VerificationStatus =
     | { state: 'scanning' }
@@ -104,6 +106,9 @@ const QRCodeReader: React.FC = () => {
                     <div className="text-4xl">✅</div>
                     <p className="mt-2 font-medium">Valid Code</p>
                     <p className="text-sm opacity-75">{verificationStatus.code}</p>
+                    <div className="animated-thing">
+                      <Blue />
+                    </div>
                   </div>
               )}
 
@@ -112,6 +117,9 @@ const QRCodeReader: React.FC = () => {
                     <div className="text-4xl">❌</div>
                     <p className="mt-2 font-medium">Invalid Code</p>
                     <p className="text-sm opacity-75">{verificationStatus.code}</p>
+                    <div className="animated-thing">
+                      <Red />
+                    </div>
                   </div>
               )}
 

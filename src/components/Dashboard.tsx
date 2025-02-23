@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ClipboardList, Truck, Send, CheckCircle, ScanLine, Hammer } from 'lucide-react';
 import image from './image.png';
 import { QRCodeCanvas } from "qrcode.react";
@@ -148,6 +148,8 @@ export default function DashboardPage() {
               </div>
             )}
           </div>
+        </div>
+        <div>
         </div>
       </div>
     </div>
